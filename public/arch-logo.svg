@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- Arch Linux logo - accurate recreation -->
+  <!-- Main blue A shape with wide base wings -->
+  <path fill="#1793d1" d="
+    M250,20
+    C250,20 180,160 120,270
+    C90,320 40,400 15,480
+    L80,480
+    C80,480 100,430 110,405
+    C125,365 155,340 210,335
+    L210,400
+    C210,440 225,460 250,460
+    C275,460 290,440 290,400
+    L290,335
+    C345,340 375,365 390,405
+    C400,430 420,480 420,480
+    L485,480
+    C460,400 410,320 380,270
+    C320,160 250,20 250,20
+    Z
+  "/>
+  <!-- White arch cutout -->
+  <ellipse cx="250" cy="400" rx="38" ry="62" fill="white"/>
+  <!-- Left slash (inner left face) -->
+  <polygon fill="white" points="155,235 145,260 195,250" opacity="0.95"/>
+  <!-- Right slash (inner right face) -->
+  <polygon fill="white" points="355,330 345,355 390,340" opacity="0.95"/>
+</svg>
