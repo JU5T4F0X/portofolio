@@ -19,7 +19,7 @@
               <p class="t-line"><span class="t-key">location</span>: <span class="t-val">Jakarta Pusat, Indonesia</span></p>
               <p class="t-line"><span class="t-key">university</span>: <span class="t-val">Telkom University</span></p>
               <p class="t-line"><span class="t-key">major</span>: <span class="t-val">Information Systems</span></p>
-              <p class="t-line"><span class="t-key">semester</span>: <span class="t-val">6th</span></p>
+              <p class="t-line"><span class="t-key">semester</span>: <span class="t-val">7th</span></p>
               <p class="t-line"><span class="t-key">gpa</span>: <span class="t-val gpa">3.53 / 4.00</span></p>
               <p class="t-line"><span class="t-key">email</span>: <span class="t-val link">hendrikdenis3@gmail.com</span></p>
               <p class="t-line"><span class="t-key">phone</span>: <span class="t-val">+62-819-0634-0877</span></p>
@@ -37,9 +37,9 @@
         <div class="about-story">
           <div class="story-block">
             <p class="story-text">
-              I'm a 6th-semester <span class="hl">Information Systems</span> student at
+              I'm a 7th-semester <span class="hl">Information Systems</span> student at
               <span class="hl">Telkom University</span> with a strong focus on
-              <span class="hl">Software Engineering</span> and full-stack web development.
+              <span class="hl">Software Engineering</span>, <span class="hl">Cyber Security</span>, and full-stack web development.
             </p>
             <p class="story-text">
               I build scalable web applications, design RESTful APIs, and architect relational
@@ -80,7 +80,7 @@ import ArchLogo from './ArchLogo.vue'
 const stats = [
   { value: '3+', label: 'Projects Built' },
   { value: '3.53', label: 'GPA' },
-  { value: '6th', label: 'Semester' },
+  { value: '7th', label: 'Semester' },
   { value: '10+', label: 'Tech Stack' },
 ]
 </script>
@@ -92,6 +92,8 @@ const stats = [
   gap: 48px;
   align-items: start;
 }
+
+
 
 .bio-terminal .terminal-body { padding: 20px 24px; }
 

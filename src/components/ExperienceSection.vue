@@ -37,43 +37,51 @@
           </div>
         </div>
 
-        <!-- Education + terminal -->
+        <!-- Education -->
         <div class="edu-panel">
           <div class="card edu-card">
-            <div class="edu-icon-wrap">
-              <GraduationCap :size="28" class="edu-icon" />
-            </div>
-            <h3 class="edu-title">Education</h3>
-            <div class="edu-detail">
-              <p class="edu-school">Telkom University</p>
-              <p class="edu-major">Bachelor of Information Systems</p>
-              <p class="edu-meta">
-                <MapPin :size="12" class="loc-icon" /> Jakarta, Indonesia
-              </p>
-              <p class="edu-meta">2023 - Present</p>
-              <div class="gpa-badge">
-                <span class="gpa-label">GPA</span>
-                <span class="gpa-value">3.53 / 4.00</span>
+            <div class="exp-header">
+              <div>
+                <div class="edu-type-badge">
+                  <GraduationCap :size="14" class="edu-icon" />
+                  <span>Education</span>
+                </div>
+                <h3 class="exp-role">Bachelor of Information Systems</h3>
+                <p class="exp-company">Telkom University</p>
+                <p class="exp-location">
+                  <MapPin :size="12" class="loc-icon" /> Jakarta, Indonesia
+                </p>
               </div>
+              <span class="period-badge">2023 - Present</span>
             </div>
-          </div>
 
-          <div class="terminal-window edu-terminal">
-            <div class="terminal-header">
-              <div class="terminal-dot red"></div>
-              <div class="terminal-dot yellow"></div>
-              <div class="terminal-dot green"></div>
-              <span class="terminal-title">uptime</span>
-            </div>
-            <div class="terminal-body">
-              <p class="t-cmd"><span class="t-prompt">$</span> uptime --pretty</p>
-              <p class="t-out">up 6 semesters, studying hard</p>
-              <br/>
-              <p class="t-cmd"><span class="t-prompt">$</span> pacman -Syu knowledge</p>
-              <p class="t-out">:: Upgrading packages...</p>
-              <p class="t-out t-green">  web-dev-skills  ████████ 100%</p>
-              <p class="t-out t-green">  multi-os-skills ████████ 100%</p>
-              <p class="t-out t-arch">  oop-patterns    ██████░░  75%</p>
+            <div class="edu-body">
+              <div class="gpa-badge">
+                <span class="gpa-label">Current GPA</span>
+                <span class="gpa-value">3.53 <span class="gpa-scale">/ 4.00</span></span>
+              </div>
+
+              <div class="edu-coursework">
+                <p class="edu-subtitle">Relevant Focus & Studies:</p>
+                <ul class="exp-bullets">
+                  <li>
+                    <ChevronRight :size="14" class="bullet-icon" />
+                    <span>Software Engineering & Object-Oriented Analysis and Design</span>
+                  </li>
+                  <li>
+                    <ChevronRight :size="14" class="bullet-icon" />
+                    <span>Database Systems, Relational Modeling & Scalable Architecture</span>
+                  </li>
+                  <li>
+                    <ChevronRight :size="14" class="bullet-icon" />
+                    <span>Full-Stack Web Development, API Design & Modern Frameworks</span>
+                  </li>
+                  <li>
+                    <ChevronRight :size="14" class="bullet-icon" />
+                    <span>Cyber Security Principles & Linux Systems Administration</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -217,58 +225,49 @@ const experiences = [
 
 .bullet-icon { color: var(--arch-blue); flex-shrink: 0; margin-top: 2px; }
 
-.edu-panel { display: flex; flex-direction: column; gap: 20px; }
-
-.edu-card { text-align: center; }
-
-.edu-icon-wrap {
+.edu-panel {
   display: flex;
+  flex-direction: column;
+}
+
+.edu-card {
+  text-align: left;
+}
+
+.edu-type-badge {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--arch-blue);
+  background: var(--arch-blue-dim);
+  border: 1px solid var(--border-arch);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .edu-icon { color: var(--arch-blue); }
 
-.edu-title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--arch-blue);
-  margin-bottom: 16px;
-  font-family: var(--font-mono);
-}
-
-.edu-detail { display: flex; flex-direction: column; gap: 6px; align-items: center; }
-
-.edu-school {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.edu-major {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-}
-
-.edu-meta {
-  font-size: 0.78rem;
-  color: var(--text-dim);
-  font-family: var(--font-mono);
+.edu-body {
+  margin-top: 16px;
   display: flex;
-  align-items: center;
-  gap: 4px;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .gpa-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 20px;
+  gap: 10px;
+  padding: 8px 16px;
   background: var(--arch-blue-dim);
   border: 1px solid var(--border-arch);
-  border-radius: 8px;
-  margin-top: 8px;
+  border-radius: 6px;
+  align-self: flex-start;
 }
 
 .gpa-label {
@@ -276,21 +275,35 @@ const experiences = [
   font-size: 0.75rem;
   color: var(--text-dim);
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .gpa-value {
   font-family: var(--font-mono);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--green-terminal);
 }
 
-.edu-terminal .terminal-body { padding: 16px 20px; }
-.t-prompt { color: var(--arch-blue); font-family: var(--font-mono); }
-.t-cmd { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-primary); margin-bottom: 4px; }
-.t-out { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); padding-left: 12px; line-height: 1.8; }
-.t-green { color: var(--green-terminal); }
-.t-arch { color: var(--arch-blue); }
+.gpa-scale {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-dim);
+}
+
+.edu-coursework {
+  margin-top: 4px;
+}
+
+.edu-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+}
+
+
 
 @media (max-width: 768px) {
   .exp-layout { grid-template-columns: 1fr; }
